@@ -35,12 +35,22 @@
       margin-right: 10px;
       border: 1px solid white;
       border-radius: 1px;
-
+    }
+    &:checked + span:before {
+      width: 4px;
+      top: 11px;
+      left: 5px;
+      border-radius: 0;
+      border: 2px solid white;
+      opacity: 1;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      transform: rotate(45deg);
     }
   }
 
   &:hover {
-    background-color: #00000044
+    background-color: #00000044;
   }
 }
 
