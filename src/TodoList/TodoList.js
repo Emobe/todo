@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { createTodo, updateTodo, removeTodo, toggleTodo } from 'actions';
-import * as selectors from 'selectors';
-import Todo from 'Todo/Todo';
-import NewTodo from 'NewTodo/NewTodo';
-import './TodoList.css';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { createTodo, updateTodo, removeTodo, toggleTodo } from "actions";
+import * as selectors from "selectors";
+import Todo from "Todo/Todo";
+import NewTodo from "NewTodo/NewTodo";
+import "./TodoList.css";
 
 class TodoList extends Component {
   static propTypes = {
@@ -37,9 +37,10 @@ class TodoList extends Component {
     const todos = this.props.todos.map((todo, index) => (
       <Todo
         key={index}
-        toggle={() => this.props.toggleTodo(todo.i)}
+        toggle={() => this.props.toggleTodo(todo.id)}
         {...todo}
-      />
+      >
+			</Todo>
     ));
 
     return (

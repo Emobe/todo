@@ -1,7 +1,7 @@
 import React from 'react';
 import * as Constants from './constants';
 import * as Actions from './actions';
-import reducer, { todoRecord } from './reducer';
+import reducer from './reducer';
 
 describe('Todo Reducer', () => {
   it('should return intialState', () => {
@@ -18,7 +18,7 @@ describe('Todo Reducer', () => {
       type: Constants.CREATE_TODO,
       todo
     };
-    const expected = [{ name: todo, done: false }];
+    const expected = [{name: todo, done: false}];
 
     const result = reducer(undefined, action);
 
@@ -26,9 +26,9 @@ describe('Todo Reducer', () => {
   });
 
   it('should mark todo as done', () => {
-    const todo = { id: '123', name: 'Test', done: false};
-    const initialState = [todo]
-    const action = { type: Constants.TOGGLE_TODO, id: '123'}
+    const todo = {id: '123', name: 'Test', done: false};
+    const initialState = [todo];
+    const action = {type: Constants.TOGGLE_TODO, id: '123'};
 
     const expected = [{...todo, done: true}];
 

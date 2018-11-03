@@ -1,31 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './Todo.scss';
 
-class Todo extends Component {
-  static propTypes = {
-    name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    date: PropTypes.instanceOf(Date),
-    toggle: PropTypes.func.isRequired
-  };
+const Todo = ({...props}) => (
+  <div className="todo" onClick={props.toggle}>
+    <label>
+      <input checked={props.done} type="checkbox" />
+      <span className="name">{props.name}</span>
+    </label>
+  </div>
+);
 
-  static defaultProps = {
-    name: '',
-    description: '',
-    date: new Date()
-  };
+Todo.defaultProps = {
+  date: new Date()
+};
 
-  render() {
-    return (
-      <div className="todo" onClick={this.props.toggle}>
-        <label htmlFor="id">
-          <input type="checkbox" />
-          <span className="name">{this.props.name}</span>
-        </label>
-      </div>
-    );
-  }
-}
+Todo.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  date: PropTypes.instanceOf(Date),
+  toggle: PropTypes.func.isRequired,
+  done: PropTypes.bool.isRequired
+};
 
 export default Todo;
