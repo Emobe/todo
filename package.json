@@ -15,7 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "xo && react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -28,9 +28,48 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "concurrently": "^4.0.1",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
+    "eslint-config-xo": "^0.25.0",
+    "eslint-config-xo-react": "^0.17.0",
+    "eslint-plugin-react": "^7.11.1",
     "prettier": "^1.14.3",
-    "redux-devtools-extension": "^2.13.5"
+    "redux-devtools-extension": "^2.13.5",
+    "xo": "^0.23.0"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "bracketSpacing": false
+  },
+  "xo": {
+    "esnext": true,
+    "space": true,
+    "extends": [
+      "xo-react"
+    ],
+    "rules": {
+      "import/no-extraneous-dependencies": false,
+      "import/no-unassigned-import": false,
+      "react/jsx-uses-vars": true,
+      "react/jsx-tag-spacing": {
+        "beforeSelfClosing": "always"
+      },
+      "unicorn/filename-case": [
+        "error",
+        {
+          "case": "camelCase"
+        }
+      ],
+      "indent": [
+        "error",
+        2
+      ]
+    },
+    "globals": [
+      "it",
+      "describe",
+      "expect"
+    ]
   }
 }
