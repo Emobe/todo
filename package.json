@@ -16,7 +16,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "xo && react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -28,6 +30,10 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@storybook/addon-actions": "^4.0.2",
+    "@storybook/addon-links": "^4.0.2",
+    "@storybook/react": "^4.0.2",
+    "babel-loader": "^8.0.4",
     "concurrently": "^4.0.1",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
@@ -36,6 +42,7 @@
     "eslint-plugin-react": "^7.11.1",
     "prettier": "^1.14.3",
     "redux-devtools-extension": "^2.13.5",
+    "storybook": "^1.0.0",
     "xo": "^0.23.0"
   },
   "prettier": {
