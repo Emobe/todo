@@ -1,82 +1,96 @@
 {
-  "name": "todo",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "immutable": "^4.0.0-rc.12",
-    "node-sass": "^4.9.4",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
-    "react-redux": "^5.1.0",
-    "react-scripts": "2.1.0",
-    "redux": "^4.0.1",
-    "shortid": "^2.2.13"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "xo && react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "devDependencies": {
-    "@storybook/addon-actions": "^4.0.2",
-    "@storybook/addon-links": "^4.0.2",
-    "@storybook/react": "^4.0.2",
-    "babel-loader": "^8.0.4",
-    "concurrently": "^4.0.1",
-    "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.6.0",
-    "eslint-config-xo": "^0.25.0",
-    "eslint-config-xo-react": "^0.17.0",
-    "eslint-plugin-react": "^7.11.1",
-    "prettier": "^1.14.3",
-    "redux-devtools-extension": "^2.13.5",
-    "storybook": "^1.0.0",
-    "xo": "^0.23.0"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "bracketSpacing": false
-  },
-  "xo": {
-    "esnext": true,
-    "space": true,
-    "extends": [
-      "xo-react"
-    ],
-    "rules": {
-      "import/no-extraneous-dependencies": false,
-      "import/no-unassigned-import": false,
-      "react/jsx-uses-vars": true,
-      "react/jsx-tag-spacing": {
-        "beforeSelfClosing": "always"
-      },
-      "unicorn/filename-case": [
-        "error",
-        {
-          "case": "camelCase"
-        }
-      ],
-      "indent": [
-        "error",
-        2
-      ]
-    },
-    "globals": [
-      "it",
-      "describe",
-      "expect"
-    ]
-  }
+	"name": "todo",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"immutable": "^4.0.0-rc.12",
+		"node-sass": "^4.9.4",
+		"react": "^16.6.0",
+		"react-dom": "^16.6.0",
+		"react-redux": "^5.1.0",
+		"react-scripts": "2.1.0",
+		"redux": "^4.0.1",
+		"shortid": "^2.2.13"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "xo && react-scripts test",
+		"eject": "react-scripts eject",
+		"storybook": "start-storybook -p 9009 -s public",
+		"build-storybook": "build-storybook -s public"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	],
+	"devDependencies": {
+		"@storybook/addon-actions": "^4.0.2",
+		"@storybook/addon-links": "^4.0.2",
+		"@storybook/react": "^4.0.2",
+		"babel-loader": "^8.0.4",
+		"concurrently": "^4.0.1",
+		"enzyme": "^3.7.0",
+		"enzyme-adapter-react-16": "^1.6.0",
+		"eslint-config-xo": "^0.25.0",
+		"eslint-config-xo-react": "^0.17.0",
+		"eslint-import-resolver-webpack": "^0.10.1",
+		"eslint-plugin-react": "^7.11.1",
+		"prettier": "^1.14.3",
+		"redux-devtools-extension": "^2.13.5",
+		"storybook": "^1.0.0",
+		"xo": "^0.23.0"
+	},
+	"prettier": {
+		"singleQuote": true,
+		"bracketSpacing": false,
+		"useTabs": true
+	},
+	"xo": {
+		"envs": [
+			"node",
+			"browser",
+			"es6"
+		],
+		"settings": {
+			"import/resolver": {
+				"node": {
+					"paths": [
+						"src",
+						"./src"
+					]
+				}
+			}
+		},
+		"parser": "babel-eslint",
+		"esnext": true,
+		"space": false,
+		"extends": [
+			"xo-react"
+		],
+		"rules": {
+			"import/no-extraneous-dependencies": false,
+			"import/no-unassigned-import": false,
+			"react/jsx-uses-vars": true,
+			"react/jsx-tag-spacing": {
+				"beforeSelfClosing": "always"
+			},
+			"unicorn/filename-case": [
+				"error",
+				{
+					"case": "pascalCase"
+				}
+			]
+		},
+		"globals": [
+			"it",
+			"describe",
+			"expect"
+		]
+	}
 }
