@@ -1,12 +1,8 @@
-import React from 'react';
+/* import React from 'react';
 
-import {storiesOf} from '@storybook/react';
-import {action} from '@storybook/addon-actions';
-import AddTodo from '../NewTodo/NewTodo'
+import { storiesOf } from '@storybook/react';
+import AddTodo from '../AddTodo/AddTodo';
 
+// Import { action } from '@storybook/addon-actions';
 
-
-storiesOf('Add Todo', module)
-  .add('default', () => (
-		<AddTodo />
-  ))
+storiesOf('Add Todo', module).add('default', () => <AddTodo />); */

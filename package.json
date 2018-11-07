@@ -15,7 +15,7 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
-		"test": "xo && react-scripts test",
+		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"storybook": "start-storybook -p 9009 -s public",
 		"build-storybook": "build-storybook -s public"
@@ -48,7 +48,7 @@
 	},
 	"prettier": {
 		"singleQuote": true,
-		"bracketSpacing": false,
+		"bracketSpacing": true,
 		"useTabs": true
 	},
 	"xo": {
@@ -63,6 +63,9 @@
 					"paths": [
 						"src",
 						"./src"
+					],
+					"extensions": [
+						".js"
 					]
 				}
 			}
@@ -74,14 +77,20 @@
 			"xo-react"
 		],
 		"rules": {
-			"import/no-extraneous-dependencies": false,
-			"import/no-unassigned-import": false,
-			"react/jsx-uses-vars": true,
+			"import/no-extraneous-dependencies": 0,
+			"import/no-unassigned-import": 0,
+			"react/jsx-uses-vars": 1,
+			"react/jsx-uses-react": 1,
+			"object-curly-spacing": [2, "always"],
 			"react/jsx-tag-spacing": {
 				"beforeSelfClosing": "always"
 			},
+			"capitalized-comments": 0,
+			"no-prototype-builtins": 0,
+			"operator-linebreak": 0,
+			"unicorn/regex-shorthand": ["never"],
 			"unicorn/filename-case": [
-				"error",
+				"never",
 				{
 					"case": "pascalCase"
 				}
@@ -90,7 +99,8 @@
 		"globals": [
 			"it",
 			"describe",
-			"expect"
+			"expect",
+			"React"
 		]
 	}
 }
