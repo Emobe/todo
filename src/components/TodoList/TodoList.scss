@@ -8,4 +8,14 @@
   font-weight: 300;
   font-size: 24px;
   overflow-y: auto;
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.done {
+		color: #7b7b7b;
+		font-size: 28px;
+	}
 }
