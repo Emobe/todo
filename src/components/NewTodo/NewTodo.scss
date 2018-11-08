@@ -1,9 +1,9 @@
-.new.todo {
+.new-todo {
   padding: 0;
   display: flex;
 }
 
-.new.todo .create {
+.new-todo .create {
   height: 100%;
   display: flex;
   justify-content: center;
@@ -13,12 +13,12 @@
   cursor: pointer;
 }
 
-.new.todo .title {
+.new-todo .title {
   height: 100%;
   flex-grow: 3;
 }
 
-.new.todo input {
+.new-todo input {
   border: none;
   padding-left: 20px;
   background-color: transparent;

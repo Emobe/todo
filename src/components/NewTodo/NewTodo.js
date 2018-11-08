@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './NewTodo.css';
+import './NewTodo.scss';
 
 class NewTodo extends Component {
 	static propTypes = {
@@ -29,12 +29,12 @@ class NewTodo extends Component {
 	}
 
 	hitEnter(e) {
-		return (e.key === 'Enter') ? this.createTodo() : null;
+		return e.key === 'Enter' ? this.createTodo() : null;
 	}
 
 	render() {
 		return (
-			<div className="new todo">
+			<div className="new-todo">
 				<div className="title">
 					<input
 						ref={this.inputRef}
