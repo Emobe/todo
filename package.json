@@ -89,6 +89,7 @@
 			"no-prototype-builtins": 0,
 			"operator-linebreak": 0,
 			"unicorn/regex-shorthand": ["never"],
+			"unicorn/explicit-length-check": 0,
 			"unicorn/filename-case": [
 				"never",
 				{
