@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Todo.scss';
+import { ListItem, ListItemText, Checkbox } from '@material-ui/core';
 
 const TodoItem = ({ ...props }) => (
-	<div className="todo" onClick={props.toggle}>
-		<label>
-			<input readOnly checked={props.done} type="checkbox" />
-			<span className="name">{props.name}</span>
-		</label>
-	</div>
+	<ListItem button divider className="todo" onClick={props.toggle}>
+		<Checkbox
+			disableRipple
+			tabIndex={-1}
+			checked={props.done ? props.done : false}
+		/>
+		<ListItemText primary={props.name} />
+	</ListItem>
 );
 
 TodoItem.defaultProps = {

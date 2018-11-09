@@ -2,7 +2,7 @@ import shortid from 'shortid';
 import * as constants from './constants';
 import { createReducer } from 'utils';
 
-const initialState = [];
+const initialState = [{ id: 1, name: 'Complete todo list', done: false }, { id: 2, name: 'work work work', done: true }];
 
 const reducer = createReducer(initialState, {
 	[constants.CREATE_TODO]: (state, { todo }) => {
