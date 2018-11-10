@@ -7,9 +7,7 @@ import { TodoItem } from 'components';
 
 const styles = theme => ({
 	paper: {
-		width: '100%',
-		maxWidth: '33vw',
-		height: '60vh',
+		height: '70vh',
 		position: 'relative'
 	},
 	list: {
