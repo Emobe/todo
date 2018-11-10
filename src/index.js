@@ -2,7 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { MuiThemeProvider } from '@material-ui/core/styles';
-import { AppBar, CssBaseline, Typography, Toolbar } from '@material-ui/core';
+import {
+	AppBar,
+	CssBaseline,
+	Typography,
+	Toolbar,
+	Grid
+} from '@material-ui/core';
 import configureStore from './store';
 import registerServiceWorker from './registerServiceWorker';
 import Theme from './theme';
@@ -17,11 +23,17 @@ ReactDOM.render(
 			<AppBar color="primary">
 				<Toolbar>
 					<Typography variant="h6" color="inherit">
-					Todo Example
+						Todo Example
 					</Typography>
 				</Toolbar>
 			</AppBar>
-			<TodoList />
+			<Grid container>
+				<Grid item lg={4} />
+				<Grid item lg={4}>
+					<TodoList />
+				</Grid>
+				<Grid item lg={4} />
+			</Grid>
 		</MuiThemeProvider>
 	</Provider>,
 	document.getElementById('root')
